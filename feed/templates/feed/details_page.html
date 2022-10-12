@@ -1,0 +1,34 @@
+{% extends 'main.html' %}
+
+{% block content %}
+
+
+
+    <div>
+        <h2>{{posts.title}}</h2>
+        <hr>
+        <p>{{posts.content}}</p>
+        <a href="{% url 'update-post' posts.id %}">Update Post</a>
+        <a href="{% url 'delete-post' posts.id %}">Delete Post</a>
+    </div>
+    <hr>
+
+{% for comment in comments %}
+    
+    <div>
+        <h3>Comments</h3>
+        <p>{{comment.body}} | {{comment.user}} - <a href="">Update</a> | <a href="{% url 'delete-comment' comment.id %}">Delete</a></p>
+    
+        <hr>
+    </div>
+{% endfor %}
+
+<form action="" method="POST">
+{% csrf_token %}
+<input type="text" name="body" placeholder="write you message here...">
+</form>
+
+
+
+
+{% endblock content %}

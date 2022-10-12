@@ -1,0 +1,44 @@
+{% extends 'main.html' %}
+
+<main>
+    {% block content %}
+    <div class="grid-container">
+
+        {% if messages %}
+        <ul class="messages">
+            {% for message in messages %}
+            <li>{{message}}</li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+
+        <div class="grid2">
+            <h3><span>Latest</span> Post</h3>
+            <ul>
+                {% for post in posts %}
+                    <a href="{% url 'details-page' post.id %}"><p>{{post.title}}</p></a>
+                    <hr>
+                {% endfor %}
+            </ul>
+        </div>
+        
+        <div class="grid3">
+            {% for post in posts %}
+                <a href="{% url 'details-page' post.id %}"><p>{{post.title}}</p></a>
+                <hr>
+                {% for comment in post.comment_set.filter %}
+                    <div>
+                        <h3>Replies</h3>
+                        <p>{{comment.body}} | {{comment.user}}</p>
+                        <hr>
+                    </div>
+                {% endfor %}
+            {% endfor %}
+
+            
+        </div>
+        <div class="grid4">footer</div>
+    </div>
+    {% endblock content%}
+</main>
+</html>
