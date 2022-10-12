@@ -10,6 +10,7 @@
                 <p class="right">Welcome {{request.user}}</p>
                 {% else %}
                 <a href="{% url 'login' %}" class="right">Login</a>
+                <a href="{% url 'register' %}" class="right">Sign Up</a>
                 {% endif %}
             </ul>
         </nav>
