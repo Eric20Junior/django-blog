@@ -11,6 +11,9 @@
 	+ Users can comment and delete comments
 	+ A Users cant delete a post or comments which is not theirs
 	+ Register/Login authentication was implemented
+	+ A successful or error message is displayed when a user login in successfully or displays an error if login was unsuccessful.
+	+ User must login to update, delete or create a comment / post.
+
 ## Installation
 + Clone this repo ans `cd` to the cloned repository's directory
 + Run `python install -r requirements.txt
