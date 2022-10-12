@@ -1,5 +1,7 @@
 ## Django Blog
 
+![screenshot](./static/blog.png)
+
 ## Description
 - The purpose of this project is to test my ability on how well i understood django, this project has less styling but more functions. The CRUD operations was implement.
 	+ Users can create new post
