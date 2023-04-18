@@ -16,7 +16,7 @@
 
 ## Installation
 + Clone this repo ans `cd` to the cloned repository's directory
-+ Run `python install -r requirements.txt
++ Run `pip install -r requirements.txt`
 
 ## Usage
 + `python manage.py makemigrations`
